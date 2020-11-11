@@ -12,7 +12,7 @@ for fact in facts:
     number = re.search('<a href=(.*)>', s)
     result_number = re.findall(r'\d+', str(number))
     result = re.search('>(.*)<', s)
-    result_final = str(result_number[2]) + "," + result.group(1)
+    result_final = str(result_number[2]) + ") " + result.group(1)
     result_final_linebreak = result_final + "\n"
     output.write(result_final_linebreak)
 
